@@ -1,0 +1,7 @@
+time stamp
+float64 apparent_baseline_estim
+float64 gear_ratio_estim
+float64 abl_avg
+float64 gr_avg
+float64 abl_avg_rse
+float64 gr_avg_rse

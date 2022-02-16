@@ -1,0 +1,4 @@
+time stamp
+float64 pose_x_rmse
+float64 pose_y_rmse
+float64 pose_theta_rmse

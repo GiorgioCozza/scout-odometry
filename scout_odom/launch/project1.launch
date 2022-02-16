@@ -1,0 +1,20 @@
+<launch>
+	
+
+	<node pkg="tf" type="static_transform_publisher" name="world_to_odom"
+	      args="-0.832142114639 0.426361680031 0.324720174074 0.0221652016044 -0.0104456143454 -0.533567428589  0.845402538776 odom world 100"/>
+
+	<!-- Nodes Startup -->
+	<node pkg="scout_odom" type="kin_pub" output="screen" name="kinematicsPub"/>
+	<node pkg="scout_odom" type="calib" output="screen" name="calibrator" />
+	<node pkg="scout_odom" type="odom_est" output="screen" name="odomEstimator"/>
+	<node pkg="scout_odom" type="rviz_prod" output="screen" name="rvizProd"/>
+
+	<!-- Initial params setup -->
+	<node pkg="dynamic_reconfigure" type="dynparam" name="intMethodSet" args="set /odomEstimator int_method 0" />
+
+	<!-- Result visualization Startup -->
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find scout_odom)/rviz/rviz_config.rviz" />
+
+	
+</launch>
