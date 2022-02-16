@@ -1,9 +1,6 @@
 
 TEAM MEMBER INFO
 
-Person Code :		10649461
-Matricola   : 		904965
-Email		:       giorgio.cozza@mail.polimi.it
 Name	    : 		Giorgio
 Surname	    : 		Cozza
 
